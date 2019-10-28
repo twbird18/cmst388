@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>Meals</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<!--Call javacript file-->
+<script type="text/javascript" src="js/image-gallery.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -15,18 +18,18 @@
 	<div class="row">
 		<div class="col-12">
             		<div id="thumbnails">
-            			<img src="img/protein.jpg" id="protein" width="19.375%" height="19.5%" alt="morning protein coffee drink" />
-                		<img src="img/breakfast.jpg" id="breakfast" width="19.375%" height="19.5%" alt="chocolate peanut butter oatmeal with bananas and strawberries"/>
-                		<img src="img/lunch.jpg" id="lunch" width="19.375%" height="19.5%" alt="Vegetable Sushi Roll with an avocado rose" />
-                		<img src="img/dinner.jpg" id="dinner" width="19.375%" height="19.5%" alt="Spaghetti and 'Meatballs'" />
-                		<img src="img/snack.jpg" id="snack" width="19.375%" height="19.5%" alt="Rice Cakes with Peanut Butter, Molasses & Chocolate Chips" />
+            			<img src="img/protein.jpg" id="protein" onclick="changeImage(this.id) "width="19.375%" height="19.5%" alt="morning protein coffee drink" onmouseover="bigImage(0); changeCaption(0)"/>
+                		<img src="img/breakfast.jpg" id="breakfast" onclick="changeImage(this.id)" width="19.375%" height="19.5%" alt="chocolate peanut butter oatmeal with bananas and strawberries"onmouseover="bigImage(1); changeCaption(1)"/>
+                		<img src="img/lunch.jpg" id="lunch" onclick="changeImage(this.id)" width="19.375%" height="19.5%" alt="Vegetable Sushi Roll with an avocado rose" onmouseover="bigImage(2); changeCaption(2)"/>
+                		<img src="img/dinner.jpg" id="dinner" onclick="changeImage(this.id)" width="19.375%" height="19.5%" alt="Spaghetti and 'Meatballs'" onmouseover="bigImage(3); changeCaption(3)"/>
+                		<img src="img/snack.jpg" id="snack" onclick="changeImage(this.id)" width="19.375% " height="19.5%" alt="Rice Cakes with Peanut Butter, Molasses & Chocolate Chips"onmouseover="bigImage(4); changeCaption(4)" />
     			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-12">
 			<div id="mainImage">
-                		<img id="largeImage" src="img/activeimg.jpg" width="100%" height="100%" alt="">
+                		<img id="largeImage" src="img/activeimg.jpg" width="100%" height="100%" alt=""/>
     			</div>
 		</div>
 	</div>
