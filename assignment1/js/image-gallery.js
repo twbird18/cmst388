@@ -2,7 +2,7 @@
 
 var imgArray = new Array(
   //list of images
-  'proten.jpg',
+  'protein.jpg',
   'breakfast.jpg',
   'lunch.jpg',
   'dinner.jpg',
@@ -12,7 +12,7 @@ var imgArray = new Array(
 var imgPath = "img/";
 
 //select image as large image
-function bigImage(imgID) {
+function selectImage(imgID) {
   var theImage = document.getElementById('largeImage');
   var newImg;
   newImg = imgArray[imgID];
@@ -29,16 +29,22 @@ var captionArray = [
 ];
 
 
-//create/change caption when image is selected
-function changeCaption(ID) {
-  var theCaption = document.getElementById('caption');
+//create/change caption when thumbnail is hovered over
+function changeCaption(imgID) {
+  var theCaption = document.getElementById("caption");
   var newCaption;
-  newCaption = captionArray[ID];
+  newCaption = captionArray[imgID];
   theCaption.innerHTML = newCaption;
 }
 
+  // shows the defaultCaption and hides the caption div
+    function clearCaption() {
+
+       document.getElementById("caption").style.display = "none";
+    }
+
 //add border to images on selection
-function changeImage(ID) {
+function hoverImage(ID) {
 
     var childImages = document.getElementById("thumbnails").children;
     var i;
