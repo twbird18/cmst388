@@ -19,29 +19,6 @@ function selectImage(imgID) {
   theImage.src = imgPath + newImg;
 }
 
-//photo caption array
-var captionArray = [
-  'Morning wakeup. Iced coffee with protein.',
-  'Chocolate Peanut Butter Oatmeal topped with strawberries, bananas, chocolate chips, flax seeds & peanut butter drizzle. Dessert for breakfast.',
-  'Sweet Potato & Avocado Sushi Rolls with an Avocado Rose.',
-  'Tomato Sauce with Vegetables & "Meatballs"',
-  'Quick evening snack to keep you full until morning. Rice cakes with molasses & peanut butter.'
-];
-
-
-//create/change caption when thumbnail is hovered over
-function changeCaption(imgID) {
-  var theCaption = document.getElementById("caption");
-  var newCaption;
-  newCaption = captionArray[imgID];
-  theCaption.innerHTML = newCaption;
-}
-
-  // shows the defaultCaption and hides the caption div
-    function clearCaption() {
-
-       document.getElementById("caption").style.display = "none";
-    }
 
 //add border to images on selection
 function hoverImage(ID) {
@@ -56,4 +33,17 @@ function hoverImage(ID) {
 
     //Set new border
     document.getElementById(ID).style.border="2px solid purple";
+}
+
+var img = document.getElementsByTagName("img");
+var text = document.getElementById("caption");
+
+for (var i = 0; i < img.length; i++) {
+  img[i].addEventListener("mouseover", function() {
+    var alt = this.alt;
+    text.textContent = alt;
+  });
+  img[i].addEventListener("mouseleave", function() {
+    text.textContent = '';
+  });
 }
