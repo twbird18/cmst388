@@ -47,3 +47,13 @@ for (var i = 0; i < img.length; i++) {
     text.textContent = '';
   });
 }
+
+//change large image Title on mouseenter
+var titleText = document.getElementById("mainTitle");
+
+for (var i = 0; i < img.length; i++) {
+  img[i].addEventListener('click', function() {
+    var id = this.id;
+    titleText.textContent = id;
+  });
+}
