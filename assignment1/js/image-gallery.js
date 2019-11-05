@@ -2,11 +2,11 @@
 
 var imgArray = new Array(
   //list of images
-  'protein.jpg',
-  'breakfast.jpg',
-  'lunch.jpg',
-  'dinner.jpg',
-  'snack.jpg'
+  'labbe.jpg',
+  'mcleod.jpg',
+  'naeher.jpg',
+  'solo.jpg',
+  'williams.jpg'
 );
 
 var imgPath = "img/";
